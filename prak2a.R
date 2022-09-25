@@ -37,7 +37,12 @@ library(dplyr)
 df<-filter(df,Brick=="No")
 print(df)
 
+library(RMySQL)
+con = dbConnect(MySQL(), user = 'root', password = '', dbname = 'houseprices', host = 'localhost')
+dbListTables(con) 
+myQuery <- "SELECT * FROM `made___houseprices`;"
+df <- dbGetQuery(con, myQuery)
 library(dplyr)
-df<-filter(df,Brick=="No" || Neighborhood=="West")
+df<-filter(df,Brick=="No" | Neighborhood == "East")
 print(df)
 
