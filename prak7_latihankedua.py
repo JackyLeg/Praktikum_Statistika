@@ -27,5 +27,5 @@ print('Jumlah Penumpang:\n', penumpang)
 data_c = data_novandy[['Name', 'Sex', 'Age', 'Pclass', 'Fare']]
 takselamat = data_c['Sex'].loc[data_novandy['Survived']==0]
 print('Penumpang yang tidak selamat:\n', takselamat.value_counts())
-selamat = data_c['Pclass'].loc[data_novandy['Survived']==1]
+selamat = data_c['Sex'].loc[data_novandy['Survived']==1]
 print('\nPenumpang yang selamat:\n', selamat.value_counts())
