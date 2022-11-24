@@ -1,6 +1,6 @@
 #Latihan Pertama - Distribusi Normal
 #1
-x=rnorm(100, 0, 1)
+x = rnorm(100, 0, 1)
 View(x)
 hist(x)
 
