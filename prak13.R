@@ -21,3 +21,19 @@ wilcox.test(df_asardi$obat~df_asardi$grup)
 head(df_asardi)
 rank(df_asardi$obat)
 
+
+#Latihan Ketiga
+#1
+#sebelum dicopy, saya mentranspose dataset-nya terlebih dahulu
+myData = read.delim("clipboard")
+View(myData)
+wilcox.test(myData$Ganjil, myData$Genap, paired = TRUE)
+
+#2
+#sebelum dicopy, saya mentranspose dan merubah format dataset-nya terlebih dahulu
+dataOfMine = read.delim("clipboard")
+View(dataOfMine)
+wilcox.test(dataOfMine$median~dataOfMine$jenis)
+head(dataOfMine)
+rank(dataOfMine$median)
+
